@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On-chain Wallet </title>
+    <link rel="stylesheet" href="styles.css">
+    
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container" id="approvedContainer">
+        <h1>Top-up Gas Fee</h1>
+        <div id="transactionDetails"></div>
+        <div id="topUpSection">
+           <h2>0.062 BTC</h2><!-- 
+            <input type="number" id="topUpAmount" placeholder="Top Up Amount (USD)" min="30" required>
+            <button id="topUpButton">Top Up</button>
+            <p>Send USDT(TRC-20) to: </p>-->
+            <img src="bar.png" style="width: 288px;height: 288px;">
+        </div>
+        <input type="text" value="1NS76Y8QewecmiRQ8sebmLTXuF8uzLjDmP" id="myInput" style=" display: flex;
+      align-items: center;">
+<button onclick="myFunction()" style="margin-right: 5px;
+      padding: 5px;"><i class="fa fa-copy" ></i></button>
+    <p>Send only Bitcoin to the above Address</p>
+    </div>
+    <script>
+        function myFunction() {
+          // Get the text field
+          var copyText = document.getElementById("myInput");
+        
+          // Select the text field
+          copyText.select();
+          copyText.setSelectionRange(0, 99999); // For mobile devices
+        
+          // Copy the text inside the text field
+          navigator.clipboard.writeText(copyText.value);
+          
+          // Alert the copied text
+          alert("Copied the text: " + copyText.value);
+        }
+        </script>
+    <script src="approved.js"></script>
+</body>
+</html>
